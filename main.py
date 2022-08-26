@@ -41,6 +41,13 @@ for rowOfCellObjects in sheet['A1':'C3']:
 print("-------")
 for cell in sheet['a']:
    print (str(cell.value))
-
+sheet.title = 'cheese ;)'
+#wb.save('example_copy.xlsx')
+print("test")
+print(wb.get_sheet_names())
+print(wb.create_sheet())
+print(wb.get_sheet_names())
+print(wb.create_sheet(index=0, title='First one'))
+print(wb.get_sheet_names())
 
 
