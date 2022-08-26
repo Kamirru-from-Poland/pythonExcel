@@ -18,5 +18,26 @@ print("-------")
 print(sheet.cell(row=1, column=2).value)
 for i in range(1, 8, 2):
     print(i, sheet.cell(row=i, column=2).value)
+print("top row "+ str(sheet.max_row)+ " top column "+str(sheet.max_column))
+print(openpyxl.utils.get_column_letter(885))
+print(openpyxl.utils.column_index_from_string('AA'))
+print(tuple(sheet['A1':'C3']))
+for rowOfCellObjects in sheet['A1':'C3']:
+    for cellObj in rowOfCellObjects:
+        print(cellObj.coordinate, cellObj.value)
+    print('--- enter ---')
+
+for rowOfCellObjects in sheet['A1':'C3']:
+    row=""
+    for cellObj in rowOfCellObjects:
+        row=row+str((cellObj.coordinate, cellObj.value))
+    print(row)
+print()
+for rowOfCellObjects in sheet['A1':'C3']:
+    row=""
+    for cellObj in rowOfCellObjects:
+        row=row+str(cellObj.value)+" "
+    print(row)
+
 
 
