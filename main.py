@@ -44,10 +44,17 @@ for cell in sheet['a']:
 sheet.title = 'cheese ;)'
 #wb.save('example_copy.xlsx')
 print("test")
-print(wb.get_sheet_names())
+print(wb.sheetnames)
 print(wb.create_sheet())
-print(wb.get_sheet_names())
+print(wb.sheetnames)
 print(wb.create_sheet(index=0, title='First one'))
-print(wb.get_sheet_names())
-
+print(wb.sheetnames)
+del wb["Sheet"]
+print(wb.sheetnames)
+sheet2 = wb['First one']
+sheet2['A1'] = 'Hello!'#
+#sheet2['A1'].style.font.size = 22
+#sheet2['A1'].font = Font(size=20)
+#sheet2['A1'].style = (size=24, italic=True)
+wb.save('example_copy.xlsx')
 
