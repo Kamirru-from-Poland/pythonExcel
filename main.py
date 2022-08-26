@@ -38,6 +38,9 @@ for rowOfCellObjects in sheet['A1':'C3']:
     for cellObj in rowOfCellObjects:
         row=row+str(cellObj.value)+" "
     print(row)
+print("-------")
+for cell in sheet['a']:
+   print (str(cell.value))
 
 
 
